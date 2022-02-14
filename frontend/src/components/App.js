@@ -169,7 +169,6 @@ function App() {
   }
 
   const handleUpdateAvatar = (profile) => {
-    console.log(profile)
     api.updateAvatarToServer(profile)
       .then((newProfile) => {
         setCurrentUser({
@@ -226,7 +225,7 @@ function App() {
     auth
       .authorize(user.password, user.username)
       .then(res => {
-        console.log(res.data)
+        console.log(document.cookie);
         if (res.data._id) {
           setLogin(user.username);
           localStorage.setItem('token', res.data._id);

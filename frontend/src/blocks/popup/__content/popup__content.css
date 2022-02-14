@@ -1,0 +1,18 @@
+/* контейнер для содержания попап */
+.popup__content {
+  width: 430px;
+  height: auto;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 3;
+}
+
+@media screen and (max-width: 890px){
+  .popup__content {
+    width: 282px;
+    max-height: 322px;
+  }
+}

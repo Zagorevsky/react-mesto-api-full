@@ -1,0 +1,10 @@
+.profile__container {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.profile__container:hover .profile__overlay {
+  opacity: 0.8;
+  cursor: pointer;
+}

@@ -1,0 +1,6 @@
+.element__blok {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  width: 246px;
+}

@@ -1,0 +1,14 @@
+.header__menu {
+  display: flex;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 890px){
+  .header__menu {
+    font-size: 14px;
+    line-height: 17px;
+    padding: 0;
+  }
+}

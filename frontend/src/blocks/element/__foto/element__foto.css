@@ -1,0 +1,13 @@
+.element__foto {
+  max-width: 100%;
+  width: 100%;
+  height: 282px;
+  background-size: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.element__foto:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}

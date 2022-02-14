@@ -1,0 +1,14 @@
+.element__like {
+  width: 22px;
+  height: 19px;
+  background-image: url(../../../images/Group.svg);
+  background-color: #FFFFFF;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.element__like:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}

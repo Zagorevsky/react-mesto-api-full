@@ -1,0 +1,22 @@
+/* Кнопка  - добавить фото */
+.profile__add-card {
+  margin: auto 0;
+  width: 150px;
+  height: 50px;
+  background-color: #000000;
+  background-image: url(../../../images/add-button.svg);
+  border: 0;
+  background-repeat: no-repeat;
+}
+
+.profile__add-card:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 890px){
+  .profile__add-card {
+    width: 282px;
+    background-image: url(../../../images/add-button-big.svg);
+  }
+}

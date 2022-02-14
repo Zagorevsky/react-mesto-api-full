@@ -1,0 +1,13 @@
+.popup__form {
+  display: grid;
+  grid-template-columns: 358px;
+  grid-row-gap: 30px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 890px){
+  .popup__form {
+    grid-template-columns: 238px;
+  }
+}

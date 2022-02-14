@@ -1,0 +1,16 @@
+/* контейнер для хейдера */
+.header {
+  display: flex;
+  justify-content: space-between;
+  min-height: 74px;
+  margin: 45px 0 0 0;
+  padding: 0;
+  border-bottom: 1px solid rgba(84, 84, 84, 0.7);
+}
+
+@media screen and (max-width: 890px){
+  .header {
+    min-width: 320px;
+    margin-top: 28px;
+  }
+}

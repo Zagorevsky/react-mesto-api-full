@@ -1,0 +1,12 @@
+/* грид-контейнер для всех фото */
+.elements {
+  display: grid;
+  max-width: 880px;
+  grid-template-columns: repeat(auto-fill, 282px);
+  justify-content: center;
+  list-style-type: none;
+  column-gap: 17px;
+  row-gap: 20px;
+  padding: 0;
+  margin: 50px auto 0 auto;
+}

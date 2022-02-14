@@ -1,0 +1,15 @@
+logs
+*.log
+npm-debug.log*
+
+node_modules
+
+.npm
+
+.DS_Store
+.idea
+.vscode
+
+.env
+
+*.log

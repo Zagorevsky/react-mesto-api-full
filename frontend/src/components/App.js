@@ -60,7 +60,6 @@ function App() {
       auth
         .checkToken(localStorage.getItem('token'))
         .then(res => {
-          console.log(res)
           if (res) {
             setLogin(res.data.email);
             handleLogin();

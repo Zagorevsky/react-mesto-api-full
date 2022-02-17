@@ -98,8 +98,8 @@ module.exports.login = (req, res, next) => {
       res
         .cookie('jwt', token, {
           maxAge: 3600000 * 24 * 7, // срок жизни куки 7 дней
-          httpOnly: true, // запрет любой доступ к куки из JavaScript
-          sameSite: true, // обработывает куки только с своего сайта
+          httpOnly: true,
+          sameSite: false,
         })
         .send({ data: user.toJSON() });
     })

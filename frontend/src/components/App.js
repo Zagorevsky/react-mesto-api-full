@@ -51,7 +51,7 @@ function App() {
 
   // установка состояния авторизованный пользователь
   const handleLogin = () => {
-    setLoggedIn(true)
+    setLoggedIn(true);
   }
 
   // проверка текущей авторизации
@@ -60,6 +60,7 @@ function App() {
       auth
         .checkToken(localStorage.getItem('token'))
         .then(res => {
+          console.log(res)
           if (res) {
             setLogin(res.data.email);
             handleLogin();
@@ -91,7 +92,7 @@ function App() {
         setCards(cards.map((card) => ({
           key: card._id,
           id: card._id,
-          idOwner: card.owner._id,
+          idOwner: card.owner,
           name: card.name,
           link: card.link,
           likes: card.likes,
@@ -103,18 +104,18 @@ function App() {
   // Добавить-удалить лайк на сервер
   const handleCardLike = (card) => {
     // Снова проверяем, есть ли уже лайк на этой карточке
-    const isLiked = card.likes.some(i => i._id === currentUser.id);
+    const isLiked = card.likes.some(i => i === currentUser.id);
     // Отправляем запрос в API и получаем обновлённые данные карточки
     api.changeLikeCardStatus(card.id, !isLiked)
       .then((newCard) => {
         // Формируем новый массив на основе имеющегося, подставляя в него новую карточку
         const newCards = cards.map((c) => c.id === card.id ? {
-          key: newCard._id,
-          id: newCard._id,
-          idOwner: newCard.owner._id,
-          name: newCard.name,
-          link: newCard.link,
-          likes: newCard.likes,
+          key: newCard.data._id,
+          id: newCard.data._id,
+          idOwner: newCard.data.owner,
+          name: newCard.data.name,
+          link: newCard.data.link,
+          likes: newCard.data.likes,
         } : c);
         // Обновляем стейт
         setCards(newCards);
@@ -188,7 +189,7 @@ function App() {
         setCards([{
           key: newCard._id,
           id: newCard._id,
-          idOwner: newCard.owner._id,
+          idOwner: newCard.owner,
           name: newCard.name,
           link: newCard.link,
           likes: newCard.likes,
@@ -225,7 +226,6 @@ function App() {
     auth
       .authorize(user.password, user.username)
       .then(res => {
-        console.log(document.cookie);
         if (res.data._id) {
           setLogin(user.username);
           localStorage.setItem('token', res.data._id);

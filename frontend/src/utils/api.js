@@ -1,5 +1,3 @@
-// импортируем ключ авторзации на сервере
-// import {authorization} from './utils.js'
 import { handlerError } from './auth.js'
 
 // используем готовый класс из прошлой работы для получения данных с сервера
@@ -13,7 +11,8 @@ class Api {
   getInitialCards() {
     return fetch(`${this._baseUrl}/cards`, {
       method: 'GET',
-      headers: this._headers
+      headers: this._headers,
+      credentials: 'include'
     })
       .then(handlerError);
   }
@@ -22,7 +21,8 @@ class Api {
   getInitialProfile() {
     return fetch(`${this._baseUrl}/users/me`, {
       method: 'GET',
-      headers: this._headers
+      headers: this._headers,
+      credentials: 'include'
     })
       .then(handlerError);
   }
@@ -32,7 +32,8 @@ class Api {
     return fetch(`${this._baseUrl}/cards`, {
       method: 'POST',
       headers: this._headers,
-      body: JSON.stringify(data)
+      body: JSON.stringify(data),
+      credentials: 'include'
     })
       .then(handlerError);
   }
@@ -42,7 +43,8 @@ class Api {
     return fetch(`${this._baseUrl}/users/me`, {
       method: 'PATCH',
       headers: this._headers,
-      body: JSON.stringify(data)
+      body: JSON.stringify(data),
+      credentials: 'include'
     })
       .then(handlerError);
   }
@@ -52,7 +54,8 @@ class Api {
     return fetch(`${this._baseUrl}/users/me/avatar`, {
       method: 'PATCH',
       headers: this._headers,
-      body: JSON.stringify(data)
+      body: JSON.stringify(data),
+      credentials: 'include'
     })
       .then(handlerError);
   }
@@ -67,6 +70,7 @@ class Api {
     return fetch(`${this._baseUrl}/cards/likes/${id}`, {
       method: 'PUT',
       headers: this._headers,
+      credentials: 'include'
     })
       .then(handlerError);
   }
@@ -76,6 +80,7 @@ class Api {
     return fetch(`${this._baseUrl}/cards/likes/${id}`, {
       method: 'DELETE',
       headers: this._headers,
+      credentials: 'include'
     })
       .then(handlerError);
   }
@@ -85,12 +90,13 @@ class Api {
     return fetch(`${this._baseUrl}/cards/${id}`, {
       method: 'DELETE',
       headers: this._headers,
+      credentials: 'include'
     })
       .then(handlerError);
   }
 }
 
-// создаем экземпляр класса Api и экспоортируем его https://mesto.nomoreparties.co/v1/cohort-29
+// создаем экземпляр класса Api и экспоортируем его
 export const api = new Api({
   baseUrl: 'https://api.zagor.students.nomoredomains.work',
   headers: {

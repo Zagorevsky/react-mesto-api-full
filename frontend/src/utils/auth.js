@@ -7,6 +7,7 @@ export const register = (password, email) => {
       'Accept': 'application/json',
       'Content-Type': 'application/json'
     },
+    credentials: 'include',
     body: JSON.stringify({password, email})
   })
   .then(handlerError)
@@ -19,6 +20,7 @@ export const authorize = (password, email) => {
       'Accept': 'application/json',
       'Content-Type': 'application/json'
     },
+    credentials: 'include',
     body: JSON.stringify({password, email})
   })
   .then(handlerError)
@@ -32,7 +34,8 @@ export const checkToken = (token) => {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${token}`,
-    }
+    },
+    credentials: 'include'
   })
   .then(handlerError)
 

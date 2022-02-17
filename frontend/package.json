@@ -17,7 +17,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && scp -r ./build/* ssh pboul-ooo@84.201.135.24:/home/pboul-ooo/mesto-frontend/"
+    "deploy": "npm run build && scp -r ./build/* ssh pboul-ooo@84.201.135.24:/home/pboul-ooo/mesto-frontend"
   },
   "eslintConfig": {
     "extends": [
@@ -37,7 +37,7 @@
       "last 1 safari version"
     ]
   },
-  "description": "## Сервис публикации фотографий на React \"Mesto\" - это приложение на котором пользователь может делиться своими фотографиями. Сайт был сделан в процессе прохождения обучения на курсе на курсе \"Веб-разработчик\" Яндекс.Практикум (12 спринт) .",
+  "description": "## Сервис публикации фотографий на React \"Mesto\" - это приложение на котором пользователь может делиться своими фотографиями. Сайт был сделан в процессе прохождения обучения на курсе на курсе \"Веб-разработчик\" Яндекс.Практикум (15 спринт) .",
   "main": "index.js",
   "keywords": [
     "Proekt",

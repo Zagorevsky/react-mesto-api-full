@@ -61,7 +61,7 @@ function App() {
         .checkToken(localStorage.getItem('token'))
         .then(res => {
           if (res) {
-            setLogin(res.data.email);
+            setLogin(res.email);
             handleLogin();
             navigate(path);
           }

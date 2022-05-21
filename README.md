@@ -1,4 +1,4 @@
-# react-mesto-api-full
+# React-mesto-api-full
 ### *Учебный проект от [Яндекс.Практикум](https://practicum.yandex.ru/web/)*
 
 ## Описание проекта
